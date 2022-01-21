@@ -10,9 +10,10 @@ difficulty_level = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
 def guess(number_of_attempts):
     """
-    Guessing function requires number of guesses (int)
+    Guessing function requires number of guesses (int) 
     """
-    print(f"You have {number_of_attempts} attempts remaining to guess the number")
+    print(
+        f"You have {number_of_attempts} attempts remaining to guess the number")
     guess_number = int(input("Make a guess: "))
     while guess_number != random_number and number_of_attempts != 0:
         if guess_number < random_number:
@@ -23,20 +24,16 @@ def guess(number_of_attempts):
         if number_of_attempts == 0:
             print("You've run out of guesses, you lose.")
         else:
-            print(f"You have {number_of_attempts} attempts remaining to guess the number")
+            print(
+                f"You have {number_of_attempts} attempts remaining to guess the number")
             guess_number = int(input("Make a guess: "))
     if guess_number == random_number:
         print(f"You got it! The answer was {random_number}")
 
 
 if difficulty_level == 'easy':
-    easy= 10
+    easy = 10
     guess(easy)
 else:
     hard = 5
     guess(hard)
-    
-    
-    
-
-
